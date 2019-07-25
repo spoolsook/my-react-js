@@ -26,36 +26,72 @@
     
     
     <script type="text/babel">
+
       let country="Thailand";
 
-      let Hello = (props) => {
+      class Hello extends React.Component{
+            render() {
 
-          console.log(props.textColor);
+                console.log(this.props.textColor);
 
-          let styleObj = {
-              color : props.textColor
-          }
+                let styleObj = {
+                    color : this.props.textColor
+                }
+
+                return (
+                    <div>
+                        <h1 id="header" style={styleObj}>Hello {this.props.name}</h1>
+                    </div>
+                )
+            }
+
+      }
+
+    //   let Hello = (props) => {
+
+    //       console.log(props.textColor);
+
+    //       let styleObj = {
+    //           color : props.textColor
+    //       }
           
-          return (
-              <div>
-                    <h1 id="header" style={styleObj}>Hello {props.name}</h1>
-              </div>
-          )
+    //       return (
+    //           <div>
+    //                 <h1 id="header" style={styleObj}>Hello {props.name}</h1>
+    //           </div>
+    //       )
+    //   }
+
+    class LoginForm extends React.Component{
+            render() {
+                return (
+                    <div>
+                            <form action="" method="get">
+                                <label htmlFor="">Username:</label>
+                                <input type="text" name="" id=""/>
+                                <label htmlFor="">Password:</label>
+                                <input type="password" name="" id=""/>
+                                <input type="button" value="submit"/>
+                            </form>
+                    </div>
+                )
+            }
+
       }
 
-      let LoginForm = () =>{
-          return (
-              <div>
-                    <form action="" method="get">
-                        <label htmlFor="">Username:</label>
-                        <input type="text" name="" id=""/>
-                        <label htmlFor="">Password:</label>
-                        <input type="password" name="" id=""/>
-                        <input type="button" value="submit"/>
-                    </form>
-              </div>
-          )
-      }
+    //   let LoginForm = () =>{
+    //       return (
+    //           <div>
+    //                 <form action="" method="get">
+    //                     <label htmlFor="">Username:</label>
+    //                     <input type="text" name="" id=""/>
+    //                     <label htmlFor="">Password:</label>
+    //                     <input type="password" name="" id=""/>
+    //                     <input type="button" value="submit"/>
+    //                 </form>
+    //           </div>
+    //       )
+    //   }
 
       ReactDOM.render(
           (
