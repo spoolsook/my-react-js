@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https:/unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https:/unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https:/unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        #header {
+            font-size: 30px;
+        }
+        .orange{
+            color:rgba(228, 83, 26, 0.973) ;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root" class="content"></div>
+
+   
+    
+    <script type="text/babel">
+      let country="Thailand";
+
+      let Hello = () => {
+          return (
+              <div>
+                    <h1 id="header" className="orange">Hello {country}</h1>
+              </div>
+          )
+      }
+
+      let LoginForm = () =>{
+          return (
+              <div>
+                    <form action="" method="get">
+                        <label htmlFor="">Username:</label>
+                        <input type="text" name="" id=""/>
+                        <label htmlFor="">Password:</label>
+                        <input type="password" name="" id=""/>
+                        <input type="button" value="submit"/>
+                    </form>
+              </div>
+          )
+      }
+
+      ReactDOM.render(
+          (
+            <div>
+                <Hello />
+                <LoginForm />
+                <LoginForm />
+            </div>
+          ),
+          document.getElementById("root")
+      )
+    </script>
+</body>
+
+</html>
