@@ -22,16 +22,23 @@
 
 <body>
     <div id="root" class="content"></div>
-
-   
+    
+    
     
     <script type="text/babel">
       let country="Thailand";
 
-      let Hello = () => {
+      let Hello = (props) => {
+
+          console.log(props.textColor);
+
+          let styleObj = {
+              color : props.textColor
+          }
+          
           return (
               <div>
-                    <h1 id="header" className="orange">Hello {country}</h1>
+                    <h1 id="header" style={styleObj}>Hello {props.name}</h1>
               </div>
           )
       }
@@ -53,7 +60,7 @@
       ReactDOM.render(
           (
             <div>
-                <Hello />
+                <Hello name="Spoolsook" textColor="red" />
                 <LoginForm />
                 <LoginForm />
             </div>
